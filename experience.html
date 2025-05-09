@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Habib Galih Panjalu - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --bg-color: #1b1f23;
+      --text-color: #f0f0f0;
+      --accent-color: #fca311;
+      --header-bg: #22272e;
+      --footer-bg: #111417;
+    }
+
+    body.light-mode {
+      --bg-color: #f2f2f2;
+      --text-color: #1b1f23;
+      --header-bg: #ffffff;
+      --footer-bg: #dedede;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s, opacity 0.5s ease;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+    }
+
+    body.fade-out {
+      opacity: 0;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: var(--text-color);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent-color);
+    }
+
+    .toggle-mode {
+      cursor: pointer;
+      font-size: 20px;
+      color: var(--text-color);
+      margin-left: 15px;
+    }
+
+    .hero {
+      padding: 60px 20px;
+      background: url('background.png') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .content-box {
+      background-color: var(--header-bg);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .hero-text {
+      flex: 1 1 400px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .hero-img {
+      flex: 1 1 300px;
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      object-fit: cover;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      transition: none;
+      animation: none;
+    }
+
+    footer {
+      background-color: var(--footer-bg);
+      color: var(--text-color);
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 14px;
+      margin-top: 0;
+    }
+
+    .footer-icons {
+      margin: 15px 0;
+    }
+
+    .footer-icons a {
+      color: var(--text-color);
+      font-size: 22px;
+      margin: 0 12px;
+      transition: color 0.3s;
+    }
+
+    .footer-icons a:hover {
+      color: var(--accent-color);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 15px 20px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      .content-box {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Portofolio</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="skills.html">Skills</a></li>
+      </ul>
+      <div class="toggle-mode" id="modeIcon" title="Toggle Dark/Light">🌙</div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-container">
+
+      <div class="content-box">
+        <div class="hero-text">
+          <p>
+            Sebagai anggota aktif OSIS di SMKN 1 Nglegok sejak 2023, saya berperan dalam merancang dan melaksanakan berbagai kegiatan sekolah, seperti pentas seni, lomba antar kelas, dan program sosial. Melalui pengalaman ini, saya mengembangkan keterampilan public speaking, kerja sama tim, kepemimpinan, serta manajemen waktu. Keterlibatan aktif dalam organisasi juga melatih saya untuk berpikir kritis, bertanggung jawab, dan berkomunikasi secara efektif di berbagai situasi.
+          </p>
+        </div>
+        <div class="hero-img">
+          <img src="img/3.jpg" alt="Habib Galih Panjalu" />
+        </div>
+      </div>
+
+      <div class="content-box">
+        <div class="hero-text">
+          <p>
+            Panitia Latihan Gabungan OSIS 2025 di SMKN 1 Nglegok, saya menyusun rencana jalur dan titik kumpul peserta, berkoordinasi dengan divisi logistik untuk kelengkapan alat keamanan, serta memantau kelancaran tiap sesi latihan. Dengan mengawasi lebih dari 100 peserta, saya mengasah kemampuan manajemen risiko, komunikasi lintas tim, dan pengambilan keputusan cepat di bawah tekanan, sekaligus memperkuat kepemimpinan dan keterampilan antisipasi masalah secara praktis.
+          </p>
+        </div>
+        <div class="hero-img">
+          <img src="img/4.jpg" alt="Sertifikat PKL" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-icons">
+      <a href="https://www.instagram.com/guwalehh_/?igsh=cmVpOG43cDEzM3lp"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/085731574811"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://habibgaleh.blogspot.com/?m=1"><i class="fab fa-blogger-b"></i></a>
+      <a href="https://github.com/habibgalih23"><i class="fab fa-github"></i></a>
+    </div>
+    &copy; 2025 Habib Galih Panjalu. All rights reserved.
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modeToggle = document.getElementById("modeIcon");
+      modeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+        modeToggle.textContent = document.body.classList.contains("light-mode") ? "☀️" : "🌙";
+      });
+
+      const navLinks = document.querySelectorAll("nav ul li a");
+      navLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (href && href !== "#") {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => {
+              window.location.href = href;
+            }, 500);
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
